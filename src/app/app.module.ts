@@ -6,12 +6,14 @@ import {ProfileService} from './services/profile.service';
 
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SearchFormComponent } from './search-form/search-form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent
+    ProfileComponent,
+    SearchFormComponent
   ],
   imports: [
     BrowserModule,

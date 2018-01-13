@@ -6,7 +6,8 @@ import 'rxjs/add/operator/map';
 export class ProfileService {
 
   private username: string;
-  private clientid = '97db2a430dfdf0b52f0c0427de633be944c64bab';
+  private clientid = 'e6712bc8beabcaf2c159';
+  private clientsecret = 'ab4c657cb7fd1001329a74da8d97f9b7ca913295';
 
   constructor(private http:Http) {
     console.log("service is now ready");
@@ -15,6 +16,7 @@ export class ProfileService {
 
   getProfileInfo(){
     return this.http.get("https://api.github.com/users/" + this.username
-     + "client_id=" + this.clientid).map(res => res.json());
+     + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
+     .map(res => res.json());
   }
 }

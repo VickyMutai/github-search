@@ -1,3 +1,9 @@
+<form action="" class="search-form">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Enter github username..." [(ngModel)]="username" name="username" (keyup)="findUser()">
+  </div>
+</form>
+
 <div *ngIf="profile">
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -34,7 +40,7 @@
             </div>
             <div class="panel-body" *ngFor="let repo of repos">
               <p class="clearfix">
-                {{repo.name}}<a href="repo.html_url" target="_blank"
+                {{repo.name}}<a href="repos.html_url" target="_blank"
                 class="btn btn-sm btn-info pull-right">
                   View this project on Github</a>
               </p>

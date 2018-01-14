@@ -9,6 +9,7 @@ import { ProfileService } from '../services/profile.service'
 export class ProfileComponent implements OnInit {
 profile: any[];
 repos: any[];
+username: string;
 
   constructor(private profileService:ProfileService) {
     this.profileService.getProfileInfo().subscribe(profile => {
@@ -22,6 +23,9 @@ repos: any[];
       })
    }
 
+   findUser(){
+     this.profileService.updateProfile(this.username);
+   }
   ngOnInit() {
   }
 

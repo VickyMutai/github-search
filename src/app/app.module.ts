@@ -9,13 +9,15 @@ import {ProfileService} from './services/profile.service';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { LandingComponent } from './landing/landing.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,

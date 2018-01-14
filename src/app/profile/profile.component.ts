@@ -12,19 +12,20 @@ repos: any[];
 username: string;
 
   constructor(private profileService:ProfileService) {
-    this.profileService.getProfileInfo().subscribe(profile => {
-      console.log(profile);
-      this.profile = profile;
-    });
 
-      this.profileService.getRepos().subscribe(repos =>{
-        console.log(repos);
-        this.repos = repos;
-      })
-   }
+  }
 
    findUser(){
-     this.profileService.updateProfile(this.username);
+    this.profileService.updateProfile(this.username);
+     this.profileService.getProfileInfo().subscribe(profile => {
+       console.log(profile);
+       this.profile = profile;
+     });
+
+       this.profileService.getRepos().subscribe(repos =>{
+         console.log(repos);
+         this.repos = repos;
+       })
    }
   ngOnInit() {
   }

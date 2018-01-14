@@ -1,5 +1,6 @@
-<form action="">
+<form action="" class="search-form">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Enter Username: ">
+    <input type="text" class="form-control" placeholder="Enter github username or repo name..."
+    [(ngModel)]="username" name="username" (keyup)="findUser()">
   </div>
 </form>

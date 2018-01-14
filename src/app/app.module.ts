@@ -5,6 +5,7 @@ import {HttpModule} from '@angular/http';
 import {FormsModule} from '@angular/forms';
 
 import {ProfileService} from './services/profile.service';
+import {LandingService} from './services/landing.service';
 
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -32,7 +33,7 @@ const routes:Routes=[
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [ProfileService],
+  providers: [ProfileService,LandingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

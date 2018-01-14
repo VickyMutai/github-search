@@ -5,8 +5,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class LandingService {
   private username: string;
-  private clientid = 'e6712bc8beabcaf2c159';
-  private clientsecret = 'ab4c657cb7fd1001329a74da8d97f9b7ca913295';
+  private clientid = 'c4c1a435f2395d421bcd';
+  private clientsecret = '99f8a79c7352d6a96d6a300017245070bd6d97ce';
 
   constructor(private http:Http) {
     console.log("service is now ready!");
@@ -14,13 +14,13 @@ export class LandingService {
 
    }
    getUserInfo(){
-     return this.http.get("api.github.com/users/" + this.username +
+     return this.http.get("https://api.github.com/users/" + this.username +
      "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
      .map(res => res.json());
    }
 
    getUserRepos(){
-     return this.http.get("api.github.com/users/" + this.username +
+     return this.http.get("https://api.github.com/users/" + this.username +
      "/repos?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
      .map(res => res.json());
    }

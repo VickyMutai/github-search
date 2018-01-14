@@ -8,13 +8,16 @@ import {LandingService} from "../services/landing.service";
 })
 export class LandingComponent implements OnInit {
 private info:any[];
+private repos:any[];
   constructor(private landingService: LandingService) {
     this.landingService.getUserInfo().subscribe(info => {
       console.log(info);
       this.info = info;
-    }
-
-    );
+    });
+    this.landingService.getUserRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos=repos;
+    });
   }
   ngOnInit() {
   }

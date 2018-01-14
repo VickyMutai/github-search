@@ -1,1 +1,16 @@
-It is working!
+<div *ngIf="info">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      {{info.name}} <small>({{info.login}})</small>
+      <span *ngIf = "info.company">,Works at{{info.company}}</span>
+      {{info.location}}
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-3">
+          {{info.avatar_url}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

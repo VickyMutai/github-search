@@ -7,10 +7,11 @@ import {LandingService} from "../services/landing.service";
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent implements OnInit {
-
+private info:any[];
   constructor(private landingService: LandingService) {
     this.landingService.getUserInfo().subscribe(info => {
       console.log(info);
+      this.info = info;
     }
 
     );

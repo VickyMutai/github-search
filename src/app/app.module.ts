@@ -10,17 +10,21 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LandingComponent } from './landing/landing.component';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
 //defining routes
 const routes:Routes=[
   {path:"landing",component: LandingComponent},
-  {path:"profile",component: ProfileComponent}
+  {path:"profile",component: ProfileComponent},
+  {path:"",redirectTo:"/landing",pathMatch:"full"},
+  {path:'**', component:NotFoundComponent}
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    LandingComponent
+    LandingComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
